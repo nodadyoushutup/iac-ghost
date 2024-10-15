@@ -8,7 +8,7 @@ terraform {
 }
 
 resource "spacelift_environment_variable" "tf_log" {
-  context_id  = data.spacelift_context.config.id
+  context_id  = "config"
   name        = "TF_LOG"
   value       = "debug"
   write_only  = false
